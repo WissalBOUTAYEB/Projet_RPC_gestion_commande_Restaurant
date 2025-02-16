@@ -1,4 +1,5 @@
 📌 Projet RPC : Gestion des Commandes d'un Restaurant
+
 📖 Description
 Ce projet est une application distribuée de gestion des commandes pour un restaurant, développée dans le cadre du module Application Répartie. Le système utilise Java RMI (Remote Method Invocation) pour la communication entre le serveur et les clients, et Swing pour l'interface graphique.
 
