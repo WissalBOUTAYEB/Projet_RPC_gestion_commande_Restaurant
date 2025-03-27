@@ -1,32 +1,92 @@
-📌 Projet RPC : Gestion des Commandes d'un Restaurant
+Restaurant Order Management System - RPC Application
+Project Overview
+This project is a distributed restaurant order management system developed using Java RMI (Remote Method Invocation) for client-server communication and Java Swing for the user interface. It was created as part of the Distributed Applications module at Euro Mediterranean University of Fes.
 
-📖 Description
-Ce projet est une application distribuée de gestion des commandes pour un restaurant, développée dans le cadre du module Application Répartie. Le système utilise Java RMI (Remote Method Invocation) pour la communication entre le serveur et les clients, et Swing pour l'interface graphique.
+Key Features
+Client Management: Customers can connect by entering their name
 
-🎯 Objectifs :
+Menu Consultation: View available dishes with descriptions and prices
 
-Gestion des commandes en temps réel : Consultation du menu, prise de commandes, et calcul de factures.
-Interface utilisateur intuitive : Utilisation de Swing pour une interaction fluide.
-Fiabilité et sécurité : Transactions sécurisées et enregistrements précis des commandes.
+Order Placement: Select dishes from the menu and place orders
 
-⚙️ Fonctionnalités:
+Bill Calculation: Automatic calculation of the total bill
 
-🔍 Consultation du Menu : Affichage des plats disponibles avec leurs descriptions et prix.
-🛒 Prise de Commandes : Sélection de plats à partir du menu et envoi des commandes au serveur.
-💸 Calcul de Factures : Calcul automatique des factures en fonction des plats commandés.
-👥 Gestion des Clients : Enregistrement des commandes de chaque client de manière distincte.
+Real-time Updates: Server interface displays received orders in real-time
 
-🏗️ Architecture et Conception:
+System Architecture
+The application follows a client-server model using Java RMI:
 
-L'application est basée sur une architecture client-serveur en utilisant Java RMI :
+Client Side:
 
-Client : Interface graphique avec Java Swing permettant :
-Connexion au serveur
-Consultation du menu
-Passage de commandes
-Calcul de facture
-Serveur :
-Fournit les services RMI pour le menu, les commandes et les factures
-Gère les données des plats et les commandes en temps réel
-Interface RMI :
-Définit les méthodes distantes utilisées par le client pour interagir avec le serveur.
+Java Swing GUI
+
+Communicates with server via RMI calls
+
+Server Side:
+
+Provides RMI services (menu, orders, billing)
+
+Manages dish data and customer orders
+
+RMI Interface: Defines remote methods for restaurant services
+
+Technologies Used
+Java: Primary programming language
+
+Java RMI: For remote method invocation between client and server
+
+Java Swing: For building the graphical user interface
+
+JFrame (main window)
+
+JPanel (component organization)
+
+JTextArea (multi-line text display)
+
+JButton (action buttons)
+
+Installation & Setup
+Prerequisites:
+
+Java Development Kit (JDK) installed
+
+RMI registry configured
+
+Server Setup:
+
+Start the RMI registry
+
+Launch the server application
+
+Ensure correct IP and port configuration
+
+Client Setup:
+
+Launch client application
+
+Connect to server using proper RMI URL
+
+Challenges & Solutions
+RMI Connection Issues:
+
+Problem: Client couldn't locate remote service (NamingException)
+
+Solution: Corrected RMI registry configuration and URL format
+
+Synchronization Problems:
+
+Problem: Data inconsistencies with multiple concurrent clients
+
+Solution: Implemented synchronized blocks and thread-safe collections
+
+Project Status
+Completed as a semester-end project. Core functionalities are fully implemented and tested.
+
+Future Enhancements
+Database integration for persistent storage
+
+Enhanced security features
+
+Mobile client application
+
+Advanced reporting and analytics
